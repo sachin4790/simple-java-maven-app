@@ -14,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh './jenkins/scripts/build.sh >target/mybuildoutput'
+                archive 'target/mybuildoutput'
             }
         }
         stage('Test') {
