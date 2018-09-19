@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn -e -X clean package'
+                sh './jenkins/scripts/build.sh'
             }
         }
         stage('Test') {
