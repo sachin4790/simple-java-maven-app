@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'mkdir -p target'
                 sh './jenkins/scripts/build.sh >target/mybuildoutput'
                 archive 'target/mybuildoutput'
             }
